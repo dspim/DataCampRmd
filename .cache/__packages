@@ -1,0 +1,16 @@
+base
+knitr
+magrittr
+dplyr
+ggplot2
+slidify
+xtable
+data.table
+slidifyLibraries
+scales
+GGally
+ggmap
+sp
+geosphere
+reshape2
+ggdendro
