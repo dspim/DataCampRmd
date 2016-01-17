@@ -4,7 +4,7 @@
   <title>Introduction to R markdown</title>
   <meta charset="utf-8">
   <meta name="description" content="Introduction to R markdown">
-  <meta name="author" content="Wush Wu, Johnson Hsieh, George Chao">
+  <meta name="author" content="Wush Wu, Johnson Hsieh, George Chao, Noah Chen">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -36,14 +36,14 @@
   <hgroup class="auto-fadein">
     <h1>Introduction to R markdown</h1>
     <h2>Dynamic documents for R</h2>
-    <p>Wush Wu, Johnson Hsieh, George Chao<br/></p>
+    <p>Wush Wu, Johnson Hsieh, George Chao, Noah Chen<br/></p>
   </hgroup>
   <article></article>  
 </slide>
     
 
     <!-- SLIDES -->
-    <slide class="largecontent" id="slide-1" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+    <slide class="" id="slide-1" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>What does data analyst do</h2>
   </hgroup>
@@ -53,12 +53,6 @@
 <small><a href="http://goo.gl/52THNf">http://goo.gl/52THNf</a></small>
 </center></p>
 
-<div style='float:left;width:48%;' class='centered'>
-  
-</div>
-<div style='float:right;width:48%;' class='centered'>
-  
-</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -82,19 +76,25 @@
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
-  <ul>
-<li><big>資料分析做不完</big></li>
-<li>說明文件沒空寫</li>
-<li>教授要求換方法</li>
-<li>老闆說要改流程</li>
-<li>客戶要我做做看</li>
-<li>年度報告要總結</li>
+  <p><center></p>
+
+<ul>
+<li><strong>資料分析</strong>做不完<br><br></li>
+<li><strong>說明文件</strong>沒空寫<br><br></li>
+<li><strong>教授</strong>要求換方法<br><br></li>
+<li><strong>老闆</strong>說要改流程<br><br></li>
+<li><strong>客戶</strong>要我做做看<br><br></li>
+<li>年度報告要總結<br><br>
+</center></li>
 </ul>
 
 </div>
 <div style='float:right;width:48%;' class='centered'>
-  <p><img src='assets/img/zikannai2.png' style='max-width: 100%;max-height: 100%'></img> 
-<small><a href="http://goo.gl/YiJrlI">http://goo.gl/YiJrlI</a></small></p>
+  <p><center> 
+<img src='assets/img/one1.jpg' style='max-width: 180%;max-height: 180%'></img><br>
+.....<br>
+<small><a href="http://goo.gl/gK6p">http://goo.gl/gK6p</a></small><br>
+</center> </p>
 
 </div>
   </article>
@@ -105,8 +105,8 @@
     <h2>Why you need R Markdown</h2>
   </hgroup>
   <article data-timings="">
-    <p><center> <img src='assets/img/TimeToR.jpg' style='max-width: 100%;max-height: 100%'></img><br>
-  <small><a href="http://goo.gl/rwrhpK">http://goo.gl/rwrhpK</a></small> 
+    <p><center> <img src='assets/img/zikannai2.png' style='max-width: 100%;max-height: 100%'></img><br>
+  <small><a href="http://goo.gl/YiJrlI">http://goo.gl/YiJrlI</a></small> 
 </center></p>
 
   </article>
@@ -162,8 +162,8 @@
   </hgroup>
   <article data-timings="">
     <ul>
-<li>最新版的RStudio已經包含R Markdown功能</li>
-<li>你也可以透過以下指令安裝R Markdown套件：</li>
+<li>最新版的RStudio已經包含R Markdown功能<br></li>
+<li>你也可以透過以下指令安裝R Markdown套件：<br></li>
 </ul>
 
 <pre><code class="r">install.packages(&quot;rmarkdown&quot;)
@@ -187,7 +187,7 @@
   </hgroup>
   <article data-timings="">
     <p><center>
-<img src='assets/img/RmdOverview.png' style='max-width: 80%;max-height: 80%'></img> 
+<img src='assets/img/RmdOverview.png' style='max-width: 77%;max-height: 77%'></img> 
 </center></p>
 
   </article>
@@ -199,7 +199,7 @@
   </hgroup>
   <article data-timings="">
     <p><center>
-<img src='assets/img/markdownOverview.png' style='max-width: 100%;max-height: 100%'></img><br>
+<img src='assets/img/markdownOverview.png' style='max-width: 200%;max-height: 200%'></img><br>
 </center></p>
 
   </article>
@@ -211,7 +211,7 @@
   </hgroup>
   <article data-timings="">
     <p><center>
-<img src='assets/img/markdownChunk.png' style='max-width: 100%;max-height: 100%'></img><br>
+<img src='assets/img/markdownChunk.png' style='max-width: 70%;max-height: 70%'></img><br>
 </center></p>
 
   </article>
@@ -219,11 +219,38 @@
 </slide>
 <slide class="" id="slide-12" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
-    <h2>Inline R Code and Equations</h2>
+    <h2>Inline R Code</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>利用 `r` 在markdown中插入R程式</li>
+<li>利用 `r` 在markdown中插入R程式<br></li>
+</ul>
+
+<pre><code>- 這是DSP推出的第 `ｒ 3+1`門課程  
+</code></pre>
+
+<ul>
+<li>這是DSP推出的第 4門課程<br></li>
+</ul>
+
+<pre><code>- 鳶尾花資料集(iris dataset)有 `ｒ levels(iris$Species)` 等種類，
+  總共有 `ｒ length(levels(iris$Species))` 種
+</code></pre>
+
+<ul>
+<li>鳶尾花資料集(iris dataset)有 setosa, versicolor, virginica 等種類，<br>
+總共有 3  種</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-13" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Inline R Equations</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
 <li>插入 LaTeX 公式的方法：<br>
 
 <ul>
@@ -232,24 +259,33 @@
 </ul></li>
 </ul>
 
-<p><img src='assets/img/InlineEx.png' style='max-width: 80%;max-height: 80%'></img>  </p>
+<pre><code>熵指標的公式為 $-\sum{p_i \log{p_i}}$ ，表示系統的亂度  
+</code></pre>
 
-<ul>
-<li>這是DSP推出的第 4門課程</li>
-<li>熵指標的公式為 $-\sum{p_i \log{p_i}}$，表示系統的亂度</li>
-</ul>
+<p>熵指標的公式為 \(-\sum{p_i \log{p_i}}\) ，表示系統的亂度  </p>
+
+<pre><code>請計算高斯分佈 $$f(x;\mu,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} 
+e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }$$  
+</code></pre>
+
+<p>請計算高斯分佈 \[f(x;\mu,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }\]</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-13" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-14" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Rendering Output</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li>RStudio: &quot;Knit&quot; command (Ctrl+Shift+K)</li>
-<li>Command line: rmarkdown::render function</li>
+<li><p>RStudio: &quot;Knit&quot; command:  </p>
+
+<ul>
+<li>(Win:Ctrl+Shift+K / OSX:Command+Shirt+K)<br>
+<br><br></li>
+</ul></li>
+<li><p>Command line: rmarkdown::render function  </p></li>
 </ul>
 
 <pre><code class="r">rmarkdown::render(&quot;input.Rmd&quot;)
@@ -258,7 +294,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue dark" id="slide-14" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="segue dark" id="slide-15" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Markdown Basics</h2>
   </hgroup>
@@ -267,20 +303,20 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-15" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-16" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Markdown Quick Reference</h2>
   </hgroup>
   <article data-timings="">
     <p>在RStudio中，在UI界面中點選<code>help (?)</code>可以查閱Markdown語法<br>
 <center>
-<img src='assets/img/MdRef.png' style='max-width: 80%;max-height: 80%'></img><br>
+<img src='assets/img/MdRef.png' style='max-width: 75%;max-height: 75%'></img><br>
 </center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue dark" id="slide-16" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="segue dark" id="slide-17" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>R Code Chunks</h2>
   </hgroup>
@@ -289,7 +325,7 @@
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-17" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-18" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Overview</h2>
   </hgroup>
@@ -311,7 +347,27 @@ summary(cars$dist)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-18" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-19" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Overview (cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>draw graphics</p>
+
+<pre class="markdown"><code>&#96;&#96;&#96;{r}
+plot(women)
+&#96;&#96;&#96;
+</code></pre>
+
+<pre><code class="r">plot(women)  
+</code></pre>
+
+<p><img src="assets/fig/plot1-1.png" alt="plot of chunk plot1"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-20" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Named R code chunk.</h2>
   </hgroup>
@@ -331,7 +387,7 @@ plot(cars)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-19" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-21" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Basic Chunk Options</h2>
   </hgroup>
@@ -340,13 +396,22 @@ plot(cars)
 <li><code>echo</code>(TRUE): whether to include R source code in the output file<br></li>
 <li><code>eval</code>(TRUE): whether to evaluate the code chunk<br></li>
 <li><code>message</code>(TRUE): whether to preserve messages emitted by message()<br></li>
+<li><code>results</code>(&#39;hide&#39;,&#39;asis&#39;): hide output ; asis treats the output of your R code as literal Markdown (when using like kable function)<br>
+<br></li>
 <li><code>include</code>(TRUE): whether to be written into the output document, but the code is still evaluated and plot files are generated<br></li>
 <li><code>warning</code>(TRUE): whether to preserve warnings in the output </li>
 <li><code>comment</code>(&quot;##&quot;): set to comment notation </li>
-<li><code>results</code>(&#39;hide&#39;,&#39;asis&#39;): hide output ; asis treats the output of your R code as literal Markdown (when using like kable function)</li>
 </ul>
 
-<p>Set global chunk options at code chunks header:</p>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-22" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Basic Chunk Options (cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Set global chunk options at code chunks header:</p>
 
 <pre><code class="r">knitr::opts_chunk$set(echo=FALSE, results=&#39;hide&#39;)
 </code></pre>
@@ -354,23 +419,43 @@ plot(cars)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-20" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-23" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
-    <h2>Exercise</h2>
+    <h2>Exercise：</h2>
   </hgroup>
   <article data-timings="">
-    <p>利用R Markdown 製作《一周天氣預報》書面報告。</p>
+    <p>利用R Markdown 製作《一周天氣預報》書面報告。<a href="https://dspim.github.io/A1-basic-data-analysis/RMD-example/RmdExAns.html">範例</a>  </p>
 
 <ul>
-<li><a href="http://www.cwb.gov.tw/V7/forecast/taiwan/Taipei_City.htm">原始出處</a></li>
-<li><a href="https://github.com/dspim/a1-basic-data-analysis-course/blob/master/RmdExQue.Rmd">參考範本</a></li>
-<li><a href="https://github.com/dspim/a1-basic-data-analysis-course/blob/master/data/weather-utf8.csv">範例資料</a></li>
+<li><a href="http://www.cwb.gov.tw/V7/forecast/taiwan/Taipei_City.htm">原始出處</a><br></li>
+<li><a href="https://github.com/dspim/a1-basic-data-analysis-course/blob/master/RmdExQue.Rmd">參考範本</a><br></li>
+<li><a href="https://github.com/dspim/a1-basic-data-analysis-course/blob/master/data/weather-utf8.csv">範例資料</a><br></li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-21" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-24" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Exercise: Original：</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img  src="assets/img/forecast_tpe1.png" height="500" width="800"></center>  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-25" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Exercise: After：</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img  src="assets/img/exam_q1.png" height="500" width="800"></center>  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-26" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise Q1</h2>
   </hgroup>
@@ -393,7 +478,7 @@ plot(cars)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-22" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-27" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise A1</h2>
   </hgroup>
@@ -421,20 +506,45 @@ min(dat[1:2, 4:5])
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-23" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-28" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Table Output</h2>
   </hgroup>
   <article data-timings="">
-    <p>Set <code>results=&#39;asis&#39;</code> to write raw results from R into the output document</p>
+    <ul>
+<li>Print data directly:<br></li>
+</ul>
+
+<pre><code class="r">print(head(women))
+</code></pre>
+
+<pre><code>  height weight
+1     58    115
+2     59    117
+3     60    120
+4     61    123
+5     62    126
+6     63    129
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-29" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Table Output (cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Using <code>knitr::kable</code> :<br>
 
 <ul>
-<li><p><code>knitr::kable</code></p>
-
-<pre class="markdown"><code>&#96;&#96;&#96;{r, results='asis'}
+<li>Set <code>results=&#39;asis&#39;</code> to write raw results from R into the output document<br>
+<pre class="markdown"><code>&#96;&#96;&#96;{r, results=&#39;asis&#39;}
 knitr::kable(women)
 &#96;&#96;&#96;
 </code></pre></li>
+</ul></li>
 </ul>
 
 <table><thead>
@@ -472,7 +582,7 @@ knitr::kable(women)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-24" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-30" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise Q2</h2>
   </hgroup>
@@ -493,7 +603,7 @@ knitr::kable(women)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-25" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-31" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise A2</h2>
   </hgroup>
@@ -521,7 +631,7 @@ rownames(out) &lt;- c(&quot;白天天氣&quot;,&quot;白天溫度&quot;,&quot;�
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-26" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-32" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise A2 (conti.)</h2>
   </hgroup>
@@ -539,7 +649,7 @@ knitr::kable(out)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-27" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-33" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise Q3</h2>
   </hgroup>
@@ -560,7 +670,7 @@ knitr::kable(out)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-28" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-34" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise A3</h2>
   </hgroup>
@@ -588,7 +698,7 @@ g + theme_gray(base_family=&quot;STHeiti&quot;)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-29" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-35" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Exercise</h2>
   </hgroup>
@@ -605,7 +715,7 @@ g + theme_gray(base_family=&quot;STHeiti&quot;)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="segue dark" id="slide-30" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="segue dark" id="slide-36" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Appendiex</h2>
   </hgroup>
@@ -614,7 +724,7 @@ g + theme_gray(base_family=&quot;STHeiti&quot;)
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-31" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-37" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>About Document Content</h2>
   </hgroup>
@@ -624,8 +734,8 @@ g + theme_gray(base_family=&quot;STHeiti&quot;)
 <pre class="prettyprint lang-yaml"><code>
 ---
 title: "Introduction to R Markdown"
-author: "Wush Wu, Johnson Hsieh, George Chao"
-date: "2015-04-12"
+author: "Wush Wu, Johnson Hsieh, George Chao, Noah Chen"
+date: "2016-01-11"
 output: html_document
 ---
 </code></pre>
@@ -633,19 +743,30 @@ output: html_document
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-32" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-38" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>YAML metadata</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src='assets/img/Cover.png' style='max-width: 80%;max-height: 80%'></img><br>
+Cover by Wush
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-39" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Some Useful HTML</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p><a href="http://www.w3schools.com/tags/tag_iframe.asp">iframe</a>: displaying a web page within a web page</p>
+<li><p><a href="http://www.w3schools.com/tags/tag_iframe.asp">iframe</a>: displaying a web page within a web page  </p>
 
-<pre><code class="html">&lt;iframe src=&quot;http://twconf.data-sci.org/&quot; height=600 width=800&gt;&lt;/iframe&gt;
+<pre><code class="html">&lt;iframe src=&quot;http://dsp.im/&quot; height=600 width=800&gt;&lt;/iframe&gt;
 </code></pre></li>
-<li><p><a href="http://www.w3schools.com/tags/tag_img.asp">img</a>: inserting images into an HTML document.</p>
-
-<p>Much easier for adjusting width and height.</p>
+<li><p><a href="http://www.w3schools.com/tags/tag_img.asp">img</a>: inserting images into an HTML document. Much easier for adjusting width and height.  </p>
 
 <pre><code class="html">&lt;img src=&quot;assets/img/dsp-logo.png&quot; alt=&quot;logo&quot;&gt;
 </code></pre>
@@ -656,35 +777,65 @@ output: html_document
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-33" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-40" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>Interactive Documents</h2>
   </hgroup>
   <article data-timings="">
     <p>It’s possible to embed a Shiny application within a document.</p>
 
-<div class="columns-2">
-  <img src="assets/img/shiny-cars-table.gif" alt="hack_yaml" height="400">
-  <img src="assets/img/shiny-hist-plot.gif" alt="hack_yaml" height="400">
-</div>
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src='assets/img/shiny-cars-table.gif' style='max-width: 100%;max-height: 100%'></img>    </p>
 
+</div>
+<div style='float:right;width:48%;' class='centered'>
+  <p><img src='assets/img/shiny-hist-plot.gif' style='max-width: 100%;max-height: 100%'></img>    </p>
+
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-34" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-41" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
-    <h2>更豐富互動視覺化工具套件 shiny</h2>
+    <h2>Publish to the web</h2>
   </hgroup>
   <article data-timings="">
-    <p><center>
-<img src='assets/img/dsp-A2.png' style='max-width: 100%;max-height: 100%'></img><br>
-<small><a href="https://dsp.im/events/a2-advanced-data-analysis-course/">https://dsp.im/events/a2-advanced-data-analysis-course/</a></small>
-</center></p>
+    <p>Using R packages::slidify to publish your slides to the web</p>
+
+<pre><code>library(slidify)
+publish_github(&quot;repo&quot;, username=&quot;user_name&quot;)
+publish_rpubs(&quot;title&quot;,&quot;file_name.html&quot;)
+publish_dropbox(dir_name)
+publish_gist(&quot;title&quot;,file=&quot;file_name.html&quot;,publish=TRUE)
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-35" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+<slide class="" id="slide-42" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Publish to the web: Github</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>sign up or login in Github.com at browser</li>
+<li>find button: New repository to add new one.</li>
+<li>select a name for repository, then created.</li>
+<li>the link of your new repository would be like:<br>
+<a href="https://github.com/your_name/repo_name.git">https://github.com/&quot;your_name&quot;/&quot;repo_name&quot;.git</a></li>
+<li>find Settings in your profile at top-right corner</li>
+<li>select SSH Keys and add SSH Key</li>
+<li>upload your SSH key which created by your own PC/notebook.</li>
+<li>at RStudio, using Rcommand:<br>
+slidify::publish_github(&quot;repo_name&quot;, username=&quot;your_name&quot;)</li>
+<li>your new page will be ready in 5~10 min and link:<br>
+<a href="https://your_name.github.io/repo_name/index.html">https://&quot;your_name&quot;.github.io/&quot;repo_name&quot;/index.html</a><br></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-43" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -696,7 +847,22 @@ output: html_document
 <li><a href="https://support.rstudio.com/hc/en-us/categories/200035113-Documentation">RStudio Documentation</a></li>
 <li><a href="https://www.coursera.org/course/repdata">Reproducible Research</a></li>
 <li><a href="http://shiny.rstudio.com/articles/">Shiny Articles</a></li>
+<li><a href="http://slidify.org/publish.html">Publish to Github Pages/Dropbox/Rpubs</a></li>
 </ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-44" style="background-image: url('assets/img/dsp-page.png'); background-repeat:no-repeat; background-position:center; background-size: 100% 100%;">
+  <hgroup>
+    <h2>Wush 教學影片</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Slidify簡介 by Wush Wu<br>
+<a href="https://www.youtube.com/watch?v=P97udK2ktuY">https://www.youtube.com/watch?v=P97udK2ktuY</a>  </p>
+
+<p>20121203 MLDM Monday <a href="Hangout%20%E8%BD%89%E6%92%AD">markdown + knitr</a> by Wush Wu<br>
+<a href="https://www.youtube.com/watch?v=OHKZLeKlUsM">https://www.youtube.com/watch?v=OHKZLeKlUsM</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -773,146 +939,200 @@ output: html_document
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=12 title='Inline R Code and Equations'>
+        data-slide=12 title='Inline R Code'>
          12
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Rendering Output'>
+        data-slide=13 title='Inline R Equations'>
          13
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=14 title='Markdown Basics'>
+        data-slide=14 title='Rendering Output'>
          14
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=15 title='Markdown Quick Reference'>
+        data-slide=15 title='Markdown Basics'>
          15
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=16 title='R Code Chunks'>
+        data-slide=16 title='Markdown Quick Reference'>
          16
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Overview'>
+        data-slide=17 title='R Code Chunks'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Named R code chunk.'>
+        data-slide=18 title='Overview'>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='Basic Chunk Options'>
+        data-slide=19 title='Overview (cont.)'>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Exercise'>
+        data-slide=20 title='Named R code chunk.'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Exercise Q1'>
+        data-slide=21 title='Basic Chunk Options'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Exercise A1'>
+        data-slide=22 title='Basic Chunk Options (cont.)'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Table Output'>
+        data-slide=23 title='Exercise：'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Exercise Q2'>
+        data-slide=24 title='Exercise: Original：'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Exercise A2'>
+        data-slide=25 title='Exercise: After：'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Exercise A2 (conti.)'>
+        data-slide=26 title='Exercise Q1'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='Exercise Q3'>
+        data-slide=27 title='Exercise A1'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Exercise A3'>
+        data-slide=28 title='Table Output'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Exercise'>
+        data-slide=29 title='Table Output (cont.)'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Appendiex'>
+        data-slide=30 title='Exercise Q2'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='About Document Content'>
+        data-slide=31 title='Exercise A2'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Some Useful HTML'>
+        data-slide=32 title='Exercise A2 (conti.)'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Interactive Documents'>
+        data-slide=33 title='Exercise Q3'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='更豐富互動視覺化工具套件 shiny'>
+        data-slide=34 title='Exercise A3'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='References'>
+        data-slide=35 title='Exercise'>
          35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Appendiex'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='About Document Content'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='YAML metadata'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Some Useful HTML'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='Interactive Documents'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='Publish to the web'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='Publish to the web: Github'>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='References'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='Wush 教學影片'>
+         44
       </a>
     </li>
   </ul>
