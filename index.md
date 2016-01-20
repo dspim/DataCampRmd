@@ -1,7 +1,7 @@
 ---
 title       : Introduction to R markdown
 subtitle    : Dynamic documents for R
-author      : Wush Wu, Johnson Hsieh, George Chao
+author      : Wush Wu, Johnson Hsieh, George Chao, Noah Chen
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -9,7 +9,8 @@ hitheme     : tomorrow      #
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
---- &twocol .largecontent
+---
+
 
 
 
@@ -28,23 +29,28 @@ knit        : slidify::knit2slides
 
 --- &twocol
 ## Why you need R Markdown
-
 *** =left
-- <big>資料分析做不完</big>
-- 說明文件沒空寫
-- 教授要求換方法
-- 老闆說要改流程
-- 客戶要我做做看
-- 年度報告要總結
+<center>
+- **資料分析**做不完<br>  
+- **說明文件**沒空寫<br>  
+- **教授**要求換方法<br>  
+- **老闆**說要改流程<br>  
+- **客戶**要我做做看<br>  
+- 年度報告要總結<br>  
+</center>
 
 *** =right
-<img src='assets/img/zikannai2.png' style='max-width: 100%;max-height: 100%'></img> 
-<small>http://goo.gl/YiJrlI</small>
+
+<center> 
+<img src='assets/img/one1.jpg' style='max-width: 180%;max-height: 180%'></img>  
+.....  
+<small>http://goo.gl/gK6p</small>  
+</center> 
 
 ---
 ## Why you need R Markdown
-<center> <img src='assets/img/TimeToR.jpg' style='max-width: 100%;max-height: 100%'></img>   
-  <small>http://goo.gl/rwrhpK</small> 
+<center> <img src='assets/img/zikannai2.png' style='max-width: 100%;max-height: 100%'></img>      
+  <small>http://goo.gl/YiJrlI</small> 
 </center>
 
 ---
@@ -70,8 +76,8 @@ A convenient tool to generate reproducible document.
 
 ---
 ## Installation
-- 最新版的RStudio已經包含R Markdown功能
-- 你也可以透過以下指令安裝R Markdown套件：
+- 最新版的RStudio已經包含R Markdown功能  
+- 你也可以透過以下指令安裝R Markdown套件：  
 
 ```r
 install.packages("rmarkdown")
@@ -84,38 +90,63 @@ install.packages("rmarkdown")
 ---
 ## Overview
 <center>
-<img src='assets/img/RmdOverview.png' style='max-width: 80%;max-height: 80%'></img> 
+<img src='assets/img/RmdOverview.png' style='max-width: 77%;max-height: 77%'></img> 
 </center>
 
 ---
 ## Markdown
 <center>
-<img src='assets/img/markdownOverview.png' style='max-width: 100%;max-height: 100%'></img>  
+<img src='assets/img/markdownOverview.png' style='max-width: 200%;max-height: 200%'></img>  
 </center>
 
 ---
 ## R Code Chunks
 <center>
-<img src='assets/img/markdownChunk.png' style='max-width: 100%;max-height: 100%'></img>  
+<img src='assets/img/markdownChunk.png' style='max-width: 70%;max-height: 70%'></img>  
 </center>
 
 ---
-## Inline R Code and Equations
-- 利用 \`r\` 在markdown中插入R程式
+## Inline R Code
+- 利用 \`r\` 在markdown中插入R程式  
+
+```
+- 這是DSP推出的第 `ｒ 3+1`門課程  
+```
+- 這是DSP推出的第 4門課程  
+
+```
+- 鳶尾花資料集(iris dataset)有 `ｒ levels(iris$Species)` 等種類，
+  總共有 `ｒ length(levels(iris$Species))` 種
+```
+- 鳶尾花資料集(iris dataset)有 setosa, versicolor, virginica 等種類，  
+  總共有 3  種
+
+
+---
+## Inline R Equations
 - 插入 LaTeX 公式的方法：   
-    * 行內`$ equation $`   
-    * 段落 `$$ equation $$`
+  * 行內`$ equation $`   
+  * 段落 `$$ equation $$`
 
-<img src='assets/img/InlineEx.png' style='max-width: 80%;max-height: 80%'></img>  
+``` 
+熵指標的公式為 $-\sum{p_i \log{p_i}}$ ，表示系統的亂度  
+```
+熵指標的公式為 $-\sum{p_i \log{p_i}}$ ，表示系統的亂度  
 
-- 這是DSP推出的第 4門課程
-- 熵指標的公式為 $-\sum{p_i \log{p_i}}$，表示系統的亂度
+``` 
+請計算高斯分佈 $$f(x;\mu,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} 
+e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }$$  
+```
+請計算高斯分佈 $$f(x;\mu,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}} e^{ -\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }$$
 
 
 ---
 ## Rendering Output
-- RStudio: "Knit" command (Ctrl+Shift+K)
-- Command line: rmarkdown::render function
+- RStudio: "Knit" command:  
+  * (Win:Ctrl+Shift+K / OSX:Command+Shirt+K)  
+<br><br>
+  
+- Command line: rmarkdown::render function  
 
 ```r
 rmarkdown::render("input.Rmd")
@@ -128,7 +159,7 @@ rmarkdown::render("input.Rmd")
 ## Markdown Quick Reference
 在RStudio中，在UI界面中點選`help (?)`可以查閱Markdown語法   
 <center>
-<img src='assets/img/MdRef.png' style='max-width: 80%;max-height: 80%'></img>  
+<img src='assets/img/MdRef.png' style='max-width: 75%;max-height: 75%'></img>  
 </center>
 
 --- .segue .dark
@@ -154,6 +185,20 @@ summary(cars$dist)
 ```
 
 ---
+## Overview (cont.)
+draw graphics
+<pre class="markdown"><code>&#96;&#96;&#96;{r}
+plot(women)
+&#96;&#96;&#96;
+</code></pre>
+
+```r
+plot(women)  
+```
+
+![plot of chunk plot1](assets/fig/plot1-1.png)
+
+---
 ## Named R code chunk. 
 
 <pre class="markdown"><code>&#96;&#96;&#96;{r plot}
@@ -172,11 +217,14 @@ plot(cars)
 - `echo`(TRUE): whether to include R source code in the output file  
 - `eval`(TRUE): whether to evaluate the code chunk  
 - `message`(TRUE): whether to preserve messages emitted by message()  
+- `results`('hide','asis'): hide output ; asis treats the output of your R code as literal Markdown (when using like kable function)  
+<br>
 - `include`(TRUE): whether to be written into the output document, but the code is still evaluated and plot files are generated  
 - `warning`(TRUE): whether to preserve warnings in the output 
 - `comment`("##"): set to comment notation 
-- `results`('hide','asis'): hide output ; asis treats the output of your R code as literal Markdown (when using like kable function)
 
+---
+## Basic Chunk Options (cont.)
 Set global chunk options at code chunks header:
 
 ```r
@@ -184,11 +232,21 @@ knitr::opts_chunk$set(echo=FALSE, results='hide')
 ```
 
 ---
-## Exercise
-利用R Markdown 製作《一周天氣預報》書面報告。
-- [原始出處](http://www.cwb.gov.tw/V7/forecast/taiwan/Taipei_City.htm)
-- [參考範本](https://github.com/dspim/a1-basic-data-analysis-course/blob/master/RmdExQue.Rmd)
-- [範例資料](https://github.com/dspim/a1-basic-data-analysis-course/blob/master/data/weather-utf8.csv)
+## Exercise：  
+利用R Markdown 製作《一周天氣預報》書面報告。[範例](https://dspim.github.io/A1-basic-data-analysis/RMD-example/RmdExAns.html)  
+- [原始出處](http://www.cwb.gov.tw/V7/forecast/taiwan/Taipei_City.htm)  
+- [參考範本](https://github.com/dspim/a1-basic-data-analysis-course/blob/master/RmdExQue.Rmd)  
+- [範例資料](https://github.com/dspim/a1-basic-data-analysis-course/blob/master/data/weather-utf8.csv)  
+
+
+---
+## Exercise: Original：  
+<center><img  src="assets/img/forecast_tpe1.png" height="500" width="800"></center>  
+
+---
+## Exercise: After：
+<center><img  src="assets/img/exam_q1.png" height="500" width="800"></center>  
+
 
 ---
 ## Exercise Q1
@@ -230,14 +288,30 @@ min(dat[1:2, 4:5])
 
 ---
 ## Table Output
+- Print data directly:  
 
-Set `results='asis'` to write raw results from R into the output document
-- `knitr::kable`
+```r
+print(head(women))
+```
 
-    <pre class="markdown"><code>&#96;&#96;&#96;{r, results='asis'}
-    knitr::kable(women)
-    &#96;&#96;&#96;
-    </code></pre>
+```
+  height weight
+1     58    115
+2     59    117
+3     60    120
+4     61    123
+5     62    126
+6     63    129
+```
+
+---
+## Table Output (cont.)
+- Using `knitr::kable` :  
+    - Set `results='asis'` to write raw results from R into the output document  
+  <pre class="markdown"><code>&#96;&#96;&#96;{r, results='asis'}
+  knitr::kable(women)
+  &#96;&#96;&#96;
+  </code></pre>
 
 
 | height| weight|
@@ -344,42 +418,67 @@ You can add R Markdown and HTML in the YAML content.
 <pre class="prettyprint lang-yaml"><code>
 ---
 title: "Introduction to R Markdown"
-author: "Wush Wu, Johnson Hsieh, George Chao"
-date: "2015-04-12"
+author: "Wush Wu, Johnson Hsieh, George Chao, Noah Chen"
+date: "2016-01-11"
 output: html_document
 ---
 </code></pre>
 
 ---
-## Some Useful HTML
-- [iframe](http://www.w3schools.com/tags/tag_iframe.asp): displaying a web page within a web page
-```html
-<iframe src="http://twconf.data-sci.org/" height=600 width=800></iframe>
-```
+## YAML metadata
+<center>
+<img src='assets/img/Cover.png' style='max-width: 80%;max-height: 80%'></img>   
+Cover by Wush
+</center>
 
-- [img](http://www.w3schools.com/tags/tag_img.asp): inserting images into an HTML document.
-    
-    Much easier for adjusting width and height.
-```html
-<img src="assets/img/dsp-logo.png" alt="logo">
-```
-<img src="assets/img/dsp-logo.png" alt="logo">
 
 ---
+## Some Useful HTML  
+- [iframe](http://www.w3schools.com/tags/tag_iframe.asp): displaying a web page within a web page  
+```html
+<iframe src="http://dsp.im/" height=600 width=800></iframe>
+```  
+  
+- [img](http://www.w3schools.com/tags/tag_img.asp): inserting images into an HTML document. Much easier for adjusting width and height.  
+```html
+<img src="assets/img/dsp-logo.png" alt="logo">
+```
+<img src="assets/img/dsp-logo.png" alt="logo">
+
+--- &twocol
 ## Interactive Documents
 It’s possible to embed a Shiny application within a document.
+*** =left
+<img src='assets/img/shiny-cars-table.gif' style='max-width: 100%;max-height: 100%'></img>    
+*** =right
+<img src='assets/img/shiny-hist-plot.gif' style='max-width: 100%;max-height: 100%'></img>    
 
-<div class="columns-2">
-  <img src="assets/img/shiny-cars-table.gif" alt="hack_yaml" height="400">
-  <img src="assets/img/shiny-hist-plot.gif" alt="hack_yaml" height="400">
-</div>
 
---- 
-## 更豐富互動視覺化工具套件 shiny
-<center>
-<img src='assets/img/dsp-A2.png' style='max-width: 100%;max-height: 100%'></img>   
-<small>https://dsp.im/events/a2-advanced-data-analysis-course/</small>
-</center>
+---
+## Publish to the web
+Using R packages::slidify to publish your slides to the web
+```
+library(slidify)
+publish_github("repo", username="user_name")
+publish_rpubs("title","file_name.html")
+publish_dropbox(dir_name)
+publish_gist("title",file="file_name.html",publish=TRUE)
+```
+
+---
+## Publish to the web: Github
+1. sign up or login in Github.com at browser
+2. find button: New repository to add new one.
+3. select a name for repository, then created.
+4. the link of your new repository would be like:  
+    [https://github.com/"your_name"/"repo_name".git](https://github.com/your_name/repo_name.git)
+5. find Settings in your profile at top-right corner
+6. select SSH Keys and add SSH Key
+7. upload your SSH key which created by your own PC/notebook.
+8. at RStudio, using Rcommand:  
+    slidify::publish_github("repo_name", username="your_name")
+9. your new page will be ready in 5~10 min and link:  
+    [https://"your_name".github.io/"repo_name"/index.html](https://your_name.github.io/repo_name/index.html)  
 
 --- 
 ## References
@@ -390,4 +489,12 @@ It’s possible to embed a Shiny application within a document.
 - [RStudio Documentation](https://support.rstudio.com/hc/en-us/categories/200035113-Documentation)
 - [Reproducible Research](https://www.coursera.org/course/repdata)
 - [Shiny Articles](http://shiny.rstudio.com/articles/)
+- [Publish to Github Pages/Dropbox/Rpubs](http://slidify.org/publish.html)
 
+---
+## Wush 教學影片
+Slidify簡介 by Wush Wu  
+https://www.youtube.com/watch?v=P97udK2ktuY  
+
+20121203 MLDM Monday [markdown + knitr]  (Hangout 轉播) by Wush Wu  
+https://www.youtube.com/watch?v=OHKZLeKlUsM
