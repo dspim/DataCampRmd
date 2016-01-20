@@ -196,7 +196,7 @@ plot(women)
 plot(women)  
 ```
 
-![plot of chunk plot1](assets/fig/plot1-1.png)
+![plot of chunk plot1](assets/fig/plot1-1.png) 
 
 ---
 ## Named R code chunk. 
@@ -483,6 +483,7 @@ publish_gist("title",file="file_name.html",publish=TRUE)
 --- 
 ## References
 
+- [An Introduction to R Markdown*](http://mansunkuo.github.io/rmd_tutorial/) by Mansun Kuo @ [DSC2014](http://taiwanrusergroup.github.io/DSC2014Tutorial/)
 - [R Markdown Cheat Sheet](http://shiny.rstudio.com/articles/rm-cheatsheet.html)
 - [R Markdown](http://rmarkdown.rstudio.com/)
 - [knitr](http://yihui.name/knitr/)
@@ -493,8 +494,8 @@ publish_gist("title",file="file_name.html",publish=TRUE)
 
 ---
 ## Wush 教學影片
-Slidify簡介 by Wush Wu  
+[Slidify簡介](https://www.youtube.com/watch?v=P97udK2ktuY) by Wush Wu  
 https://www.youtube.com/watch?v=P97udK2ktuY  
 
-20121203 MLDM Monday [markdown + knitr]  (Hangout 轉播) by Wush Wu  
+[20121203 MLDM Monday [markdown + knitr]  (Hangout 轉播)](https://www.youtube.com/watch?v=OHKZLeKlUsM) by Wush Wu  
 https://www.youtube.com/watch?v=OHKZLeKlUsM
