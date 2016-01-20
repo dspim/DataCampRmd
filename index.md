@@ -497,5 +497,5 @@ publish_gist("title",file="file_name.html",publish=TRUE)
 [Slidify簡介](https://www.youtube.com/watch?v=P97udK2ktuY) by Wush Wu  
 https://www.youtube.com/watch?v=P97udK2ktuY  
 
-[20121203 MLDM Monday [markdown + knitr]  (Hangout 轉播)](https://www.youtube.com/watch?v=OHKZLeKlUsM) by Wush Wu  
+[20121203 MLDM Monday:markdown + knitr (Hangout 轉播)](https://www.youtube.com/watch?v=OHKZLeKlUsM) by Wush Wu  
 https://www.youtube.com/watch?v=OHKZLeKlUsM
